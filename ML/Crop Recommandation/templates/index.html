@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="Slidebar">
+        <div id="blink">Crop Recommandation System Using Machine Learning 🤖</div>
+    </div>
+    <h1><span>Crop Recommandation System</span> 🍃</h1>
+    <div id="container">
+        <form action="/predict" method="POST">
+            <div id="first">
+                <div>
+                    <label for="Nitrogen">Nitrogen:</label>
+                    <input type="number" id="Nitrogen"  name="Nitrogen" placeholder="Enter Nitrogen" required>
+                </div>
+                <div>
+                    <label for="Phosphorus">Phosphorus:</label>
+                    <input type="number" id="Phosphorus" name="Phosphorus" placeholder="Enter Phosphorus" required>
+                </div>
+                <div>
+                    <label for="Potassium">Potassium:</label>
+                    <input type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" required>
+                </div>
+            </div>
+            <div id="second">
+                <div>
+                    <label for="Temparature">Temparature:</label>
+                    <input type="number" id="Temparature" name="Temparature" placeholder="Enter Temparature" required>    
+                </div>
+               <div id="humidity">
+                    <label for="Humidity">Humidity:</label>
+                    <input type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity" required>
+                </div>
+                <div id="ph">
+                    <label for="Ph">Ph:</label>
+                    <input type="number" id="Ph" name="Ph" placeholder="Enter Ph" required>
+                </div>
+            </div>
+            <div id="third">
+                <label for="Rainfall">Rainfall:</label>
+                <input type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall" required>
+            </div>
+
+            <button type="submit">Get Recommandation</button>
+            
+        </form>
+
+        <div class="ans">
+            {% if result %}
+                <marquee behavior="alternate" direction="left">
+                    <span>{{result}}🙌🏻</span>
+                </marquee>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+#Slidebar{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight:500;
+    font-size: 30px;
+    padding-top: 28px;
+    text-align: center;
+}
+#Slidebar:hover{
+    color: yellow;
+    cursor: pointer;
+}
+#container{
+    height:600px;
+    width: 1200px;
+    border-radius: 30px;
+    background-color: peru;
+    margin-top: 60px;
+    margin-left: 240px;
+    
+}
+h1{
+    color: green;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+}
+span{
+    text-decoration: underline;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-size: 25px;
+}
+#first{
+    display: flex;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: -110px;
+}
+#second{
+    display: flex;
+    padding: 20px;
+    margin-left: 50px;
+    
+}
+#third{
+    display: flex;
+    padding: 20px;
+    margin-left: 50px;
+}
+form div input{
+    margin: 10px;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: 0;
+    margin-left: -5px;
+}
+#third input{
+    margin-top: 45px;
+    margin-left: -85px;
+}
+button{
+    height: 70px;
+    width: 250px;
+    align-items: center;
+    margin-left:450px;
+    margin-top: -10px;
+    background-color: rgb(46, 56, 20);
+    border: 0;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-size: x-large;
+}
+button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+#first{
+    
+}
+#first div{
+    display: grid;
+    margin: 40px;
+    margin-top: 0;
+    margin-bottom: 10px
+} 
+#second div{
+    display: grid;
+    margin: 40px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+#third{
+    margin-left: 107px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.ans{
+    
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -15px;
+    margin-left: 3px;
+    color: brown;
+}
+#blink {
+    animation: blinker 0.8s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        color: yellow;
+        opacity: 0;
+    }
+}

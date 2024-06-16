@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NETFLIX STOCK PREDICTION 📊</h1>
+        <form action="/predict" method = "Post">
+            <div class="first">
+                <label for="open">OPEN:</label>
+                <input type="number" id="open" name="open" required step="0.01" value="0">
+            </div>
+            
+            <div class="second">
+                <label for="high">HIGH:</label>
+                <input type="number" id="high" name="high" required step="0.01" value="0">
+            </div>
+            
+            <div class="third">
+                <label for="low">LOW:</label>
+                <input type="number" id="low" name="low" required step="0.01" value="0">
+            </div>
+            
+            <div class="fourth">
+                <label for="adj_close">ADJ_CLOSE:</label>
+                <input type="number" id="adj_close" name="adj_close" required step="0.01" value="0">
+            </div>
+            
+            <div class="fifth">
+                <label for="volume">VOLUME:</label>
+                <input type="number" id="volume" name="volume" required step="0.01" value="0">
+            </div>
+            
+            <div class="sixth">
+                <label for="year">YEAR:</label>
+                <input type="number" id="year" name="year" required step="0.01" value="0">
+            </div>
+            
+            <div class="seventh">
+                <label for="month">MONTH:</label>
+                <input type="number" id="month" name="month" required step="0.01" value="0">
+            </div>
+            
+            <div class="eight">
+                <label for="day">DAY:</label>
+                <input type="number" id="day" name="day" required step="0.01" value="0">
+            </div>
+
+            <button type="submit"> Get Predict</button>
+            
+        </form>
+        <marquee behavior="alternate" direction="right">
+            Our prediction of Netflix Stock is : {{output}} $
+        </marquee>
+    </div>
+</body>
+</html>

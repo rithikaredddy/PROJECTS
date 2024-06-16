@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEPEN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <label><i class="fa-brands fa-html5" style="color: #e70000;"></i> HTML</label>
+            <textarea id="html_code" onkeyup="run()"></textarea>
+            <label><i class="fa-brands fa-css3-alt" style="color: #74C0FC;"></i> CSS</label>
+            <textarea id="css_code" onkeyup="run()"></textarea>
+            <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i> JAVASCRIPT</label>
+            <textarea id="js_code" onkeyup="run()"></textarea>
+        </div>
+        <div class="right">
+            <label><i class="fa-solid fa-play" style="color: #63E6BE;"></i> OUTPUT</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+
+    <script>
+        let run = ()=>{
+            let htmlCode = document.getElementById("html_code").value;
+            let cssCode = document.getElementById("css_code").value;
+            let jsCode = document.getElementById("js_code").value;
+            let output = document.getElementById("output");
+
+            output.contentDocument.body.innerHTML = htmlCode +"<style>"+cssCode+"</style>";
+            output.contentWindow.eval(jsCode);
+        }
+    </script>
+</body>
+</html>

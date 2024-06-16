@@ -1,0 +1,76 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+body{
+    height : 100vh;
+    width : 100%;
+    margin : 0;
+    background-color: black;
+    padding : 0;
+}
+.container{
+    display : grid;
+    align-items: center;
+    margin: 200px;
+    margin-top: 5px;
+    padding: 20px 250px 0px 250px;
+}
+h1{
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: blink 0.7s linear infinite;
+}
+form label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+form input{
+    width : 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0px 15px 0px 15px;
+    background-color: whitesmoke;
+}
+form div{
+   margin: 15px;
+}
+button{
+    font-size: 30px;
+    margin-left: 310px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+button:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+@keyframes blink{
+    0%{
+        color: red;
+    }
+    50%{
+        color: yellow;
+    }
+    100%{
+        color: red;
+    }
+}
+marquee{
+    color: yellow;
+    font-size: 25px;
+    margin-top: 20px;
+}
+marquee:hover{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
